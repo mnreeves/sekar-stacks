@@ -1,9 +1,13 @@
+import { Config } from '../config/config';
 import Express from 'express';
 import { routerApp } from '../routers';
 
 const app = Express();
+const port = Config.applicationPort;
 
 export default function BootstrapExpress() {
   app.use('', routerApp);
-  app.listen(3000, () => {});
+  app.listen(port, () => {
+    console.log(`application running at port: ${port}`);
+  });
 }
