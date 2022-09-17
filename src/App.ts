@@ -1,8 +1,5 @@
-import Express from 'express';
+import BootstrapExpress from "./utils/bootstrap_express";
 
 (async () => {
-  const app = Express();
-  app.get('/', (req, res) => {res.send('k')});
-
-  app.listen(3000, () => {});
+  BootstrapExpress();
 })();
