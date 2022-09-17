@@ -1,8 +1,9 @@
 import Express from 'express';
+import { routerApp } from '../routers';
 
 const app = Express();
 
 export default function BootstrapExpress() {
-  app.get('/', (req, res) => {res.send('ok')});
+  app.use('', routerApp);
   app.listen(3000, () => {});
 }
