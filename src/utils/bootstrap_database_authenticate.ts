@@ -1,11 +1,15 @@
+import { Config } from '../config/config';
 import { Sequelize } from 'sequelize';
 
+const { dbName, dbUser, dbPassword } = Config;
+
 export const sequelizeConnection = new Sequelize(
-  'gorgeous',
-  'root',
-  'password',
+  dbName,
+  dbUser,
+  dbPassword,
   {
-    dialect: 'mysql'
+    dialect: 'mysql',
+    logging: false
   }
 );
 
