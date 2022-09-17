@@ -4,7 +4,7 @@
   "description": "",
   "main": "./src/App.ts",
   "scripts": {
-    "dev": "npx tsc && nodemon dist/App.js"
+    "dev": "nodemon src/App.ts"
   },
   "type": "commonjs",
   "keywords": [],
@@ -12,6 +12,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.1",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.23.0",
     "ts-node": "^10.9.1"
   },
   "devDependencies": {
