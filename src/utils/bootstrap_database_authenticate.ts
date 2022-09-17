@@ -1,6 +1,6 @@
 import { Sequelize } from 'sequelize';
 
-export const sequelize = new Sequelize(
+export const sequelizeConnection = new Sequelize(
   'gorgeous',
   'root',
   'password',
@@ -11,7 +11,7 @@ export const sequelize = new Sequelize(
 
 export default async function bootstrapDatabaseAuthenticate() {
   try {
-    await sequelize.authenticate();
+    await sequelizeConnection.authenticate();
     console.log('connection to database successfully authenticated');
   } catch (error: any) {
     console.log(`Error happened: ${error.message}`);
